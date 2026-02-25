@@ -1,0 +1,15 @@
+section{
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  padding: 0 5dvw;
+}
+
+@media (max-width: 768px) {
+  section{
+    flex-direction: column;
+    gap: 5dvh;
+    padding: 0 3dvw;
+    justify-content: center;
+  }
+}
