@@ -1,5 +1,8 @@
+import Footer from "../components/layouts/Footer";
 import Navbar from "../components/layouts/Navbar";
 import "./LandingPage.css";
+
+
 export default function LandingPage() {
   return (
     <>
@@ -51,6 +54,8 @@ export default function LandingPage() {
         </div>
         <div className="image-content IFive"></div>
       </section>
+
+      < Footer />
     </>
   );
 }
