@@ -1,15 +1,82 @@
 section{
-  height: 100dvh;
+  height: 80dvh;
   display: flex;
   align-items: center;
-  padding: 0 5dvw;
+}
+
+.image-content{
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.IOne {
+  background-image: url("../assets/images/LOne.png");
+}
+.ITwo {
+  background-image: url("../assets/images/LTwo.png");
+}
+.IThree {
+  background-image: url("../assets/images/LThree.png");
+}
+.IFour {
+  background-image: url("../assets/images/LFour.png");
+}
+.IFive {
+  background-image: url("../assets/images/LFive.png");
+}
+
+.text-content{
+  flex: 1;
+  padding: 20px;
+}
+
+.text-content h1{
+  font-size: 3em;
+  margin-bottom: 20px;
+  margin: 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.text-content h1 span{
+  color: #F99E7C;
+}
+
+.text-content p{
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.TCOne {
+  display: none;
 }
 
 @media (max-width: 768px) {
   section{
     flex-direction: column;
-    gap: 5dvh;
-    padding: 0 3dvw;
     justify-content: center;
+    gap: 0;
+    height: 100dvh;
+    margin: 0;
+  }
+  .image-content{
+    width: 100%;
+  }
+  .text-content{
+    padding-top: 12dvh;
+    padding-bottom: 0;
+    margin-bottom: -10dvh;
+  }
+  .TCOne {
+    display: block;
+  }
+  .TCTwo {
+    display: none;
+  }
+  .text-content h1{
+    font-size: 2.5em;
   }
 }
