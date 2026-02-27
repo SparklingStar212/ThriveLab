@@ -1,0 +1,79 @@
+.hero-section{
+  height: 100dvh;
+  background-image: url('../assets/images/AOne.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3dvh;
+}
+.hero-section h1{
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero-section p{
+  font-weight: 700;
+  max-width: 32dvw;
+  font-size: 1.5em;
+}
+
+.AITwo{
+  background-image: url('../assets/images/ATwo.png');
+  border-radius: 50%;
+}
+
+.AIThree{
+  background-image: url('../assets/images/AThree.png');
+  width: 75dvw;
+}
+
+.AIFour{
+  background-image: url('../assets/images/AFour.png');
+}
+
+.a-p{
+  max-width: 40dvw;
+}
+
+.a-p2{
+  max-width: 50dvw;
+}
+
+.a-text-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.a-section{
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .a-p{
+  max-width: fit-content;
+  }
+
+  .a-p2{
+    max-width: fit-content;
+  }
+
+  .AITwo{
+    width: 70%;
+  }
+
+  .hero-section h1{
+    font-size: 2.4em;
+  }
+  
+  .hero-section p{
+    max-width: fit-content;
+    font-size: 1.2em;
+  }
+}

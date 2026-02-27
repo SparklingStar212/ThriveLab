@@ -31,7 +31,13 @@ section{
 .text-content{
   flex: 1;
   padding: 20px;
+  text-align: center;
 }
+
+.s-btn{
+  margin-top: 8px;
+}
+
 
 .text-content h1{
   font-size: 3em;
@@ -71,6 +77,8 @@ section{
     padding-bottom: 0;
     margin-bottom: -10dvh;
   }
+
+
   .TCOne {
     display: block;
   }

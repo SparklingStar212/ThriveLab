@@ -11,6 +11,7 @@ export default function LandingPage() {
         <div className="text-content">
           <h1>A Safe Space For Your <span>Emotions</span> </h1>
           <p>A private place to understand and care for your emotions.</p>
+          <button className="signup-btn s-btn">Sign up for free</button>
         </div>
         <div className="image-content IOne"></div>
       </section>

@@ -128,6 +128,25 @@
   font-weight: 700;
 }
 
+.card{
+  text-align: center;
+  background-color: #E9EFE0;
+  border-radius: 15px;
+  padding: 3.1dvh 2dvw;
+  width: 25dvw;
+  margin-bottom: 20px;
+}
+
+.card h2{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card p{
+  font-size: 1.1em;
+}
+
 @media (max-width: 768px) {
   .navbar-links, .navbar-buttons {
     display: none;
@@ -141,5 +160,17 @@
   }
   .footer-links{
     gap: 4dvw;
+  }
+  .card{
+    width: 70dvw;
+  }
+  .card h2{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: 700;
+  }
+
+  .card p{
+    font-size: 0.9em;
   }
 }
