@@ -1,0 +1,32 @@
+.bottom-wrapper {
+  background-color: #f7f9f5;
+}
+
+
+.calm-section {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.calm-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.calm-subtitle {
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto 3rem auto;
+}
+
+.calm-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.calm-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%; 
+}

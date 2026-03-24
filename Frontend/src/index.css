@@ -1,0 +1,50 @@
+:root {
+  
+  --color-bg-main: #f7f9f5;      
+  --color-bg-card: #eef3eb;      
+  --color-brand-green: #a7c49f;  
+  --color-brand-green-hover: #96b38e;
+  --color-brand-accent: #e5987e; 
+  
+  
+  --text-main: #1a1a1a;          
+  --text-secondary: #555555;     
+  --text-muted: #888888;         
+
+  
+  --white: #ffffff;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-phone: 0 20px 40px rgba(0, 0, 0, 0.12);
+  
+  
+  --radius-button: 30px;
+  --radius-card: 20px;
+  --radius-circle: 50%;
+
+  
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  margin: 0;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+button {
+  font-family: var(--font-main);
+  transition: all 0.3s ease;
+}
