@@ -180,8 +180,7 @@
   .tools-list {
     display: grid;
     grid-template-columns: 1fr;
-  }
-  /* Mockup shows a vertical stack even on desktop */ 
+  } /* Mockup shows a vertical stack even on desktop */
   .support-scroll-content {
     padding: 40px;
   }

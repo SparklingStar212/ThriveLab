@@ -38,8 +38,8 @@ const Diary = () => {
           {/* Left Column: List */}
           <section className="entry-list">
             {entries.map(entry => (
-              <div 
-                key={entry.id} 
+              <div
+                key={entry.id}
                 className={`entry-card ${selectedEntry?.id === entry.id ? 'active' : ''}`}
                 onClick={() => { setSelectedEntry(entry); setIsEditing(false); }}
               >
@@ -70,7 +70,7 @@ const Diary = () => {
                   {isEditing && <button className="save-btn">save</button>}
                   {!isEditing && <button className="close-x" onClick={() => setSelectedEntry(null)}>✕</button>}
                 </div>
-                
+
                 <div className="detail-body">
                   <div className="mood-select" onClick={() => setShowEmojiModal(true)}>
                     {selectedEntry?.emoji || "😊"}

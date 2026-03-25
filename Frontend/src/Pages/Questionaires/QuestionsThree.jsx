@@ -28,11 +28,11 @@ const QuestionsThree = () => {
 
         <div className="q-options-container">
           {options.map((option) => (
-            <div 
-              key={option.id} 
+            <div
+              key={option.id}
               className={`q-row ${option.align === 'right' ? 'flex-end' : 'flex-start'}`}
             >
-              <button 
+              <button
                 className={`q-chip ${selected === option.id ? 'is-active' : ''}`}
                 onClick={() => setSelected(option.id)}
               >

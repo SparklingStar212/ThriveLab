@@ -4,21 +4,25 @@ import './Onboarding.css';
 const OnboardingTwo = () => {
   return (
     <div className="onboarding-page">
-      {/* Header with Skip button */}
+      {/* Skip button remains in the same place */}
       <div className="onboarding-header">
         <button className="skip-btn">Skip</button>
       </div>
 
-      {/* Top Section: Green Circle with Phone Mockup */}
+      {/* Top Section: App Mockup with Green Gradient Circle */}
       <div className="illustration-container">
-        <div className="green-orb-bg">
-          <div className="phone-container">
-            <img src="/phone-checkin.png" alt="App Mockup" className="mockup-img" />
+        <div className="green-orb-mask">
+          <div className="phone-mockup-wrapper">
+            <img 
+              src="/check-in-mockup.png" 
+              alt="Daily Check-in App Mockup" 
+              className="onboarding-mockup-img" 
+            />
           </div>
         </div>
       </div>
 
-      {/* Bottom Section: Text and Buttons */}
+      {/* Bottom Section: Text & Controls */}
       <div className="onboarding-content">
         <h1 className="onboarding-title">Check In Daily</h1>
         <p className="onboarding-desc">
@@ -26,8 +30,8 @@ const OnboardingTwo = () => {
           daily check-ins help you understand yourself better over time.
         </p>
 
-        {/* Dots: Second dot is now the wide/active one */}
-        <div className="dots-container">
+        {/* Progress Dots - Second dot is now active */}
+        <div className="progress-dots">
           <span className="dot"></span>
           <span className="dot active"></span>
           <span className="dot"></span>
@@ -35,10 +39,10 @@ const OnboardingTwo = () => {
           <span className="dot"></span>
         </div>
 
-        {/* Bottom Buttons */}
-        <div className="button-footer">
-          <button className="btn-prev">Previous</button>
-          <button className="btn-next">Next</button>
+        {/* Dual Navigation Buttons */}
+        <div className="nav-container split">
+          <button className="prev-btn">Previous</button>
+          <button className="next-btn">Next</button>
         </div>
       </div>
     </div>

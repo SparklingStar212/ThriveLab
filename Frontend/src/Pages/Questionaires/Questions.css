@@ -1,122 +1,188 @@
 .questions-page {
-background-color: #f7f9f5;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-padding: 20px;
-font-family: sans-serif;
+  background-color: #f7f9f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.q-header {
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-margin-bottom: 40px;
+/* Header & Progress */
+.questions-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 60px;
 }
 
-.q-dot {
-width: 35px;
-height: 8px;
-background: #d1d1d1;
-border-radius: 10px;
-margin: 0 4px;
+.progress-bar-top {
+  display: flex;
+  gap: 8px;
 }
 
-.q-dot.active { background: #a7c49f; }
-
-.q-skip {
-position: absolute;
-right: 0;
-background: none;
-border: none;
-color: #666;
+.step-pill {
+  width: 30px;
+  height: 8px;
+  background-color: #d1d1d1;
+  border-radius: 10px;
 }
 
-.q-body { text-align: center; flex: 1; }
-.q-title { font-size: 1.6rem; margin-bottom: 5px; }
-.q-sub { font-size: 0.9rem; color: #888; margin-bottom: 30px; }
-
-/* Staggered layout like the image */
-.q-options-list {
-display: flex;
-flex-direction: column;
-gap: 15px;
-max-width: 400px;
-margin: 0 auto;
+.step-pill.active {
+  background-color: #a7c49f;
 }
 
-.q-chip {
-padding: 15px 25px;
-border: 1px solid #a7c49f;
-background: white;
-border-radius: 12px;
-cursor: pointer;
-width: fit-content;
-transition: 0.2s;
+.questions-header .skip-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.chip-0 { align-self: flex-start; margin-left: 5%; }
-.chip-1 { align-self: flex-end; margin-right: 5%; }
-.chip-2 { align-self: flex-start; }
-.chip-3 { align-self: flex-end; }
-.chip-4 { align-self: flex-start; margin-left: 10%; }
-
-.q-chip.is-active {
-background: #eef3eb;
-border-width: 2px;
+/* Text Styling */
+.questions-content {
+  text-align: center;
+  flex: 1;
 }
 
-.q-footer { text-align: right; padding-top: 20px; }
-.q-next-btn {
-background: #c4d4b5;
-border: none;
-padding: 12px 40px;
-border-radius: 15px;
-font-weight: bold;
+.questions-content h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Staggered Grid Layout */
+.options-staggered-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.option-chip {
+  background-color: #f7f9f5;
+  border: 1px solid #a7c49f;
+  padding: 15px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+  color: #333;
+}
+
+/* Creating the "staggered" effect from your image */
+.chip-align-0 {
+  align-self: flex-start;
+  margin-left: 10%;
+}
+.chip-align-1 {
+  align-self: flex-end;
+  margin-right: 5%;
+}
+.chip-align-2 {
+  align-self: flex-start;
+}
+.chip-align-3 {
+  align-self: flex-end;
+}
+.chip-align-4 {
+  align-self: flex-start;
+  margin-left: 5%;
+}
+
+.option-chip.selected {
+  background-color: #eef3eb;
+  box-shadow: 0 4px 8px rgba(167, 196, 159, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Footer & Button */
+.questions-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.next-btn-round {
+  background-color: #c4d4b5;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.next-btn-round:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Desktop Polish */
+@media (min-width: 768px) {
+  .questions-content h1 {
+    font-size: 2rem;
+  }
+  .options-staggered-grid {
+    gap: 30px;
+  }
 }
 
 /* Layout for Questions Two grid */
 .q-options-container {
-display: flex;
-flex-direction: column;
-gap: 25px;
-max-width: 500px;
-margin: 40px auto;
-padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .q-row {
-display: flex;
-gap: 15px;
-width: 100%;
+  display: flex;
+  gap: 15px;
+  width: 100%;
 }
 
-.flex-start { justify-content: flex-start; }
-.flex-end { justify-content: flex-end; padding-right: 10%; }
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+  padding-right: 10%;
+}
 
 /* Previous Button Styling */
 .btn-back {
-background: white;
-border: 1px solid #E5987E; /* Brand peach color */
-padding: 12px 30px;
-border-radius: 15px;
-font-weight: 500;
-cursor: pointer;
+  background: white;
+  border: 1px solid #e5987e; /* Brand peach color */
+  padding: 12px 30px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .q-footer.split {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: auto;
-padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-bottom: 20px;
 }
 
 /* Chip sizing for the 'Two per row' layout */
 .q-row .q-chip {
-flex: 0 1 auto;
-min-width: 140px;
+  flex: 0 1 auto;
+  min-width: 140px;
 }
 
 /* Container for the staggered buttons */
@@ -135,8 +201,14 @@ min-width: 140px;
   width: 100%;
 }
 
-.flex-start { justify-content: flex-start; padding-left: 5%; }
-.flex-end { justify-content: flex-end; padding-right: 5%; }
+.flex-start {
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+.flex-end {
+  justify-content: flex-end;
+  padding-right: 5%;
+}
 
 /* Progress Dots - Third dot is active */
 .q-dot.active {
@@ -184,7 +256,7 @@ min-width: 140px;
   border-radius: 18px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2D3E2D;
+  color: #2d3e2d;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);

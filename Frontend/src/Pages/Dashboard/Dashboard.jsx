@@ -23,8 +23,8 @@ const Dashboard = () => {
         {/* Top Header */}
         <header className="dash-header">
           <div className="mobile-logo">
-             <img src="/logo-heart.png" alt="Logo" />
-             <span>Thrivelab</span>
+            <img src="/logo-heart.png" alt="Logo" />
+            <span>Thrivelab</span>
           </div>
           <div className="user-profile">
             <span>Johnny</span>
@@ -78,12 +78,12 @@ const Dashboard = () => {
           {/* Coming Soon Card */}
           <div className="card coming-soon-card">
             <div className="coming-soon-header">
-               <h2>Coming Soon</h2>
-               <h3>Grow with Zuma</h3>
+              <h2>Coming Soon</h2>
+              <h3>Grow with Zuma</h3>
             </div>
             <div className="coming-soon-body">
-               <img src="/zuma-full.png" alt="Zuma" />
-               <p>Your emotional companion is arriving soon. Grow together through daily check-ins</p>
+              <img src="/zuma-full.png" alt="Zuma" />
+              <p>Your emotional companion is arriving soon. Grow together through daily check-ins</p>
             </div>
           </div>
 

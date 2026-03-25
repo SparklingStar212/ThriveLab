@@ -47,6 +47,52 @@ const Support = () => {
         </nav>
       </aside>
 
+      <main className="support-main">
+        <header className="dash-header">
+          <div className="mobile-logo">Thrivelab</div>
+          <div className="user-profile">
+            <span>Johnny</span>
+            <img src="/avatar.png" alt="User" className="avatar" />
+          </div>
+        </header>
+
+        <div className="support-scroll-content">
+          {/* Quote Card */}
+          <section className="quote-card">
+            <span className="quote-label">Quote of the day</span>
+            <p className="quote-text">
+              “You don’t have to see the whole staircase, just take the first step”
+            </p>
+            <span className="quote-author">Martin Luther King Jr.</span>
+            <div className="heart-icon">❤️</div>
+          </section>
+
+          {/* Tools Grid */}
+          <div className="tools-list">
+            {tools.map((tool, index) => (
+              <div key={index} className={`tool-card ${tool.color}`}>
+                <div className="tool-icon" style={{ backgroundColor: tool.iconBg }}>
+                  {tool.icon}
+                </div>
+                <h3>{tool.title}</h3>
+                <p>{tool.desc}</p>
+                <button className="open-tools">
+                  Open Tools <span>→</span>
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Nav - Mobile */}
+        <nav className="bottom-nav">
+          <div className="tab">🏠<span>Home</span></div>
+          <div className="tab">📅<span>Calendar</span></div>
+          <div className="tab">📓<span>Diary</span></div>
+          <div className="tab active">✨<span>Support</span></div>
+          <div className="tab">💬<span>AI chat</span></div>
+        </nav>
+      </main>
     </div>
   );
 };

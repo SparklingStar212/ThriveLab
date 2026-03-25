@@ -105,7 +105,7 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Desktop Responsiveness */
@@ -114,7 +114,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .circle-bg-mask {
     height: 400px;
     width: 600px;
@@ -122,31 +122,11 @@
   }
 }
 
-.onboarding-page {
-  background-color: #f7f9f5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.onboarding-header {
-  padding: 20px;
-  text-align: right;
-}
-
-.skip-btn {
-  background: none;
-  border: none;
-  color: #666;
-  cursor: pointer;
-}
-
-/* The Green Glowing Circle */
-.green-orb-bg {
-  width: 100%;
+/* Green Gradient Mask for Screen 2 */
+.green-orb-mask {
+  width: 110vw; /* Slightly wider than screen to create that soft curve */
   height: 50vh;
-  background: radial-gradient(circle, #86B98E 0%, #A7C49F 100%);
+  background: radial-gradient(circle at center, #86b98e 0%, #a7c49f 100%);
   border-radius: 0 0 50% 50%;
   display: flex;
   justify-content: center;
@@ -154,149 +134,140 @@
   padding-bottom: 20px;
 }
 
-.phone-container {
-  width: 200px;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+.phone-mockup-wrapper {
+  width: 220px;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.15));
 }
 
-.mockup-img { width: 100%; }
-
-/* Text Styling */
-.onboarding-content { padding: 40px 20px; }
-.onboarding-title { font-size: 1.8rem; margin-bottom: 10px; }
-.onboarding-desc { color: #555; max-width: 300px; margin: 0 auto 30px; }
-
-/* Progress Dots */
-.dots-container {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 40px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: #ccc;
-  border-radius: 50%;
-}
-
-.dot.active {
-  width: 24px;
-  border-radius: 10px;
-  background: #a7c49f;
-}
-
-/* Footer Buttons */
-.button-footer {
-  display: flex;
-  justify-content: space-between;
+.onboarding-mockup-img {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  height: auto;
+  display: block;
 }
 
-.btn-prev {
+/* Updated Button Styles for Screen 2 */
+.nav-container.split {
+  justify-content: space-between; /* Pushes buttons to opposite sides */
+  align-items: center;
+  width: 100%;
+}
+
+.prev-btn {
   background: white;
-  border: 1px solid #E5987E; /* Peach border */
+  border: 1px solid #e5987e; /* Peach border from your mockup */
+  color: #333;
   padding: 12px 30px;
   border-radius: 15px;
+  font-weight: 500;
   cursor: pointer;
 }
 
-.btn-next {
-  background: #c4d4b5;
-  border: none;
-  padding: 12px 35px;
-  border-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
+/* Desktop Polish for the Mockup */
+@media (min-width: 768px) {
+  .green-orb-mask {
+    width: 600px;
+    height: 450px;
+    border-radius: 300px;
+    margin-top: 20px;
+  }
+
+  .phone-mockup-wrapper {
+    width: 260px;
+  }
 }
 
-/* Background Orb for Screen 3 - Peach-to-Green mix */
+/* Unique Orb for Screen 3 - Peach/Green mix */
 .support-orb-bg {
-width: 100%;
-height: 52vh;
-background: radial-gradient(circle at center, #ffd8c4 0%, #eef3eb 70%, #f7f9f5 100%);
-border-radius: 0 0 50% 50%;
-display: flex;
-justify-content: center;
-align-items: flex-end;
-overflow: hidden;
+  width: 100%;
+  height: 52vh;
+  /* Matches the multi-tone glow in your image */
+  background: radial-gradient(
+    circle at center,
+    #ffd8c4 0%,
+    #eef3eb 70%,
+    #f7f9f5 100%
+  );
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 .onboarding-main-img {
-width: 100%;
-max-width: 420px;
-height: auto;
-transform: translateY(10px);
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  /* Keeps the illustration anchored to the bottom of the curve */
+  transform: translateY(10px);
 }
 
-/* Dots: Pill shape for the active dot */
-.dots-container {
-display: flex;
-justify-content: center;
-gap: 8px;
-margin-bottom: 40px;
+/* Ensure the title doesn't get too cramped */
+.onboarding-title {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  padding: 0 10px;
 }
 
-.dot {
-width: 8px;
-height: 8px;
-background: #d1d1d1;
-border-radius: 50%;
-}
-
+/* Reusing the pill-shape logic for the active dot */
 .dot.active {
-width: 24px;
-background-color: #a7c49f;
-border-radius: 10px;
+  width: 24px;
+  background-color: #a7c49f;
+  border-radius: 10px;
+  transition: width 0.3s ease;
 }
 
 /* Desktop Polish */
 @media (min-width: 768px) {
-.support-orb-bg {
-width: 650px;
-height: 480px;
-border-radius: 325px;
-margin: 0 auto;
-}
+  .support-orb-bg {
+    width: 650px;
+    height: 480px;
+    border-radius: 325px;
+    margin: 0 auto;
+  }
 }
 
 /* Unique Orb for Screen 4 - Very soft light green */
 .stats-orb-bg {
-width: 100%;
-height: 50vh;
-background: radial-gradient(circle at center, #f0f4ee 0%, #f7f9f5 100%);
-border-radius: 0 0 50% 50%;
-display: flex;
-justify-content: center;
-align-items: center; /* Centers the card instead of anchoring to bottom */
-overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  background: radial-gradient(circle at center, #f0f4ee 0%, #f7f9f5 100%);
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the card instead of anchoring to bottom */
+  overflow: hidden;
 }
 
-/* Styling the floating stats card */
+/* Styling the floating stats card  */
 .stats-card {
-width: 260px;
-background: #fff;
-border-radius: 25px;
-padding: 10px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-/* Adding a subtle float animation like the original UI */
-animation: floating 3s ease-in-out infinite;
+  width: 260px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  /* Adding a subtle float animation like the original UI */
+  animation: floating 3s ease-in-out infinite;
 }
 
 .chart-img {
-width: 100%;
-height: auto;
-border-radius: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
 /* Floating animation keyframes */
 @keyframes floating {
-0% { transform: translateY(0px); }
-50% { transform: translateY(-10px); }
-100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Dot Logic for Screen 4 /
@@ -304,60 +275,65 @@ border-radius: 15px;
 
 /* Desktop Polish */
 @media (min-width: 768px) {
-.stats-orb-bg {
-width: 650px;
-height: 480px;
-border-radius: 325px;
-margin: 0 auto;
-}
-.stats-card {
-width: 300px;
-}
+  .stats-orb-bg {
+    width: 650px;
+    height: 480px;
+    border-radius: 325px;
+    margin: 0 auto;
+  }
+  .stats-card {
+    width: 300px;
+  }
 }
 
 /* Unique Orb for Screen 5 - Multi-tone sunset/warm glow */
 .choice-orb-bg {
-width: 100%;
-height: 52vh;
-/* Replicating that soft tan/sunset gradient in the mockup */
-background: radial-gradient(circle at center, #ead9c8 0%, #eef3eb 75%, #f7f9f5 100%);
-border-radius: 0 0 50% 50%;
-display: flex;
-justify-content: center;
-align-items: flex-end;
-overflow: hidden;
+  width: 100%;
+  height: 52vh;
+  /* Replicating that soft tan/sunset gradient in the mockup */
+  background: radial-gradient(
+    circle at center,
+    #ead9c8 0%,
+    #eef3eb 75%,
+    #f7f9f5 100%
+  );
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 /* Ensure the character and paths sit correctly */
 .choice-orb-bg .onboarding-main-img {
-width: 110%; /* Makes the paths "leak" out slightly for that wide look */
-max-width: 500px;
-transform: translateY(5px);
+  width: 110%; /* Makes the paths "leak" out slightly for that wide look */
+  max-width: 500px;
+  transform: translateY(5px);
 }
 
 /* Specific button text for the final screen */
 .button-footer .btn-prev {
-border-color: #e5987e; /* Using the peach brand color for Sign In */
-color: #333;
+  border-color: #e5987e; /* Using the peach brand color for Sign In */
+  color: #333;
 }
 
 .button-footer .btn-next {
-background-color: #a7c49f; /* Stronger green for the primary Sign Up action */
-color: #2D3E2D;
+  background-color: #a7c49f; /* Stronger green for the primary Sign Up action */
+  color: #2d3e2d;
 }
 
 /* Dots: Final position */
 .dot.active {
-width: 24px;
-background-color: #a7c49f;
+  width: 24px;
+  background-color: #a7c49f;
 }
 
 /* Desktop Polish */
 @media (min-width: 768px) {
-.choice-orb-bg {
-width: 700px;
-height: 500px;
-border-radius: 350px;
-margin: 0 auto;
-}
+  .choice-orb-bg {
+    width: 700px;
+    height: 500px;
+    border-radius: 350px;
+    margin: 0 auto;
+  }
 }
