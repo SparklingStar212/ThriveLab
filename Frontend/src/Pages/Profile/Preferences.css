@@ -1,0 +1,124 @@
+.pref-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.p-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.p-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+.p-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.p-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.p-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.p-content {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+.p-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.setting-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Theme Dropdown UI */
+.select-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.chevron {
+  font-size: 0.7rem;
+  color: #333;
+}
+
+/* Toggle Switch UI */
+.toggle-switch {
+  width: 50px;
+  height: 26px;
+  background-color: #eee;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch.on {
+  background-color: #c4d4b5;
+} /* Brand Green */
+
+.toggle-knob {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch.on .toggle-knob {
+  left: 26px;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  .p-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .p-content {
+    padding-top: 60px;
+  }
+}

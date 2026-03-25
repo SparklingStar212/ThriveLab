@@ -1,0 +1,113 @@
+.help-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.h-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.h-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+.h-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.h-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.h-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.h-content {
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+.h-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+.h-section {
+  margin-bottom: 30px;
+}
+.h-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+}
+.h-text {
+  line-height: 1.5;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.h-faq-list {
+  list-style: none;
+  padding: 0;
+}
+.h-faq-list li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.h-links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+.h-link-item {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.h-link-item:hover {
+  color: #a7c49f;
+}
+
+.h-footer {
+  margin-top: 100px;
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  padding-bottom: 40px;
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .h-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .h-content {
+    padding-top: 60px;
+  }
+}

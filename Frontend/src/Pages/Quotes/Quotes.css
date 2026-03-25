@@ -1,0 +1,167 @@
+.quotes-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.q-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.q-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+.q-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.q-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.q-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.q-content {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.settings-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.q-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Toggle Styling */
+.toggle {
+  width: 50px;
+  height: 26px;
+  background: #eee;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.toggle.on {
+  background: #c4d4b5;
+}
+.knob {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+.toggle.on .knob {
+  left: 26px;
+}
+
+/* Time Pill */
+.time-pill {
+  background: #dadada;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Category Radio Styling */
+.category-section {
+  text-align: left;
+  margin-top: 10px;
+}
+.section-label {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.radio-row input {
+  display: none;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #a7c49f;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-row input:checked + .radio-custom::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #a7c49f;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+/* Outline Buttons */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+.outline-btn {
+  background: none;
+  border: 1px solid #a7c49f;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Desktop Polish */
+@media (min-width: 1024px) {
+  .q-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .q-content {
+    padding-top: 40px;
+  }
+}

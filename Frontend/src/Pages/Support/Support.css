@@ -1,0 +1,188 @@
+.support-container {
+  display: flex;
+  background-color: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.support-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.support-scroll-content {
+  padding: 20px;
+  padding-bottom: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Quote Card Styling */
+.quote-card {
+  background-color: #b8c7ab;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.quote-label {
+  background: rgba(255, 255, 255, 0.9);
+  color: #555;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.quote-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.quote-author {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  color: #f8a47e;
+}
+.heart-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 1.2rem;
+  filter: grayscale(1) opacity(0.7);
+}
+
+/* Tools Grid */
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: transform 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Background variants from mockup */
+.green-light {
+  border-color: #b8c7ab;
+}
+.green-pale {
+  background-color: #eef3eb;
+}
+.peach-light {
+  background-color: #fef4f0;
+  border-color: #f8a47e;
+}
+.peach-pale {
+  background-color: #fff9f7;
+  border-color: #f8a47e;
+}
+
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.tool-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.tool-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.open-tools {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+/* Sidebar & Bottom Nav (Shared with Dashboard) */
+.sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.nav-item.active {
+  background: #a7c49f;
+  color: white;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.tab.active {
+  color: #a7c49f;
+  font-weight: bold;
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom-nav {
+    display: none;
+  }
+  .tools-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  /* Mockup shows a vertical stack even on desktop */ 
+  .support-scroll-content {
+    padding: 40px;
+  }
+}

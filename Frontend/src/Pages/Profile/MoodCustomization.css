@@ -1,0 +1,68 @@
+.mood-custom-page { display: flex; background: #f7f9f5; min-height: 100vh; font-family: sans-serif; }
+
+.m-sidebar { width: 240px; background: #f0f4ee; padding: 40px 20px; display: none; }
+.m-nav-item { padding: 15px; border-radius: 12px; cursor: pointer; color: #555; }
+
+.m-main { flex: 1; display: flex; flex-direction: column; }
+.m-header { display: flex; justify-content: space-between; padding: 20px; align-items: center; }
+.m-avatar { width: 35px; border-radius: 50%; margin-left: 10px; }
+
+.m-content { padding: 20px; flex: 1; max-width: 800px; margin: 0 auto; width: 100%; text-align: center; }
+
+.m-title-area h1 { font-size: 1.3rem; font-weight: 500; margin-bottom: 5px; }
+.m-title-area p { font-size: 0.8rem; color: #888; margin-bottom: 30px; }
+
+/* Grid Layout */
+.mood-grid {
+display: grid;
+grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+gap: 20px;
+justify-items: center;
+}
+
+.mood-option-row {
+display: flex;
+align-items: center;
+gap: 15px;
+cursor: pointer;
+width: 100%;
+max-width: 180px;
+}
+
+/* Custom Circular Checkbox */
+.mood-checkbox {
+width: 22px;
+height: 22px;
+border: 1px solid #a7c49f;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+background: white;
+flex-shrink: 0;
+}
+
+.mood-checkbox.checked { background: #eef3eb; }
+.inner-dot { width: 12px; height: 12px; background: #a7c49f; border-radius: 50%; }
+
+/* Mini Mood Card */
+.mood-card-mini {
+flex: 1;
+background: #fdfdfd;
+border: 1px solid #ffd8c4; /* Peach border from mockup */
+border-radius: 12px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.mini-emoji { font-size: 1.8rem; margin-bottom: 5px; }
+.mini-label { font-size: 0.85rem; color: #333; font-weight: 500; }
+
+/* Desktop Adjustments */
+@media (min-width: 1024px) {
+.m-sidebar { display: flex; flex-direction: column; }
+.mood-grid { grid-template-columns: 1fr 1fr 1fr; } /* 3 columns on desktop */
+}

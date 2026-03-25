@@ -1,0 +1,163 @@
+.quotes-sub-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.s-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.s-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+.s-nav-item.active {
+  background: #a7c49f;
+  color: white;
+}
+
+.s-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.s-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.s-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.s-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.s-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* Empty State Illustration */
+.empty-state {
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+}
+.empty-illustration img {
+  width: 150px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Quote Card */
+.quote-card {
+  background: #f0f4ee;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  border: 1px solid #eef3eb;
+  text-align: center;
+}
+.quote-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+  margin: 20px 0;
+}
+.heart-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 1.2rem;
+}
+
+/* Emoji Tag styling */
+.emoji-tag,
+.emoji-tag-card {
+  border: 1px solid #f8a47e;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.emoji-tag-card {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+/* Add Quote Form */
+.add-quote-container {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.add-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: auto;
+}
+.type-placeholder {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background: #c4d4b5;
+  border: none;
+  padding: 15px 60px;
+  border-radius: 15px;
+  align-self: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+/* Floating Action Button */
+.fab-plus {
+  position: absolute;
+  bottom: 40px;
+  width: 55px;
+  height: 55px;
+  background: #b8c7ab;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Viewports */
+@media (min-width: 1024px) {
+  .s-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,181 @@
+.stories-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.st-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.st-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.st-nav-item.active {
+  background: #a7c49f;
+  color: white;
+}
+
+.st-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.st-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.st-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.st-content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Grid of Stories */
+.stories-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  overflow-y: auto;
+}
+
+.story-card {
+  background: #f0f4ee; /* Pale green background */
+  border: 1px solid #a7c49f;
+  border-radius: 20px;
+  padding: 25px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-icon-box {
+  width: 50px;
+  height: 50px;
+  background: #5e6954; /* Darker olive for story icons */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.story-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  min-height: 40px;
+  color: #333;
+}
+
+.read-btn {
+  background: #b8c7ab;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Reading Detail Panel */
+.reading-panel {
+  flex: 0 0 400px;
+  background: #fcfdfb;
+  border-radius: 30px;
+  border: 1px solid #eee;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.st-placeholder {
+  text-align: center;
+  align-self: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.full-story-view {
+  position: relative;
+  text-align: center;
+}
+.close-story {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.story-header-icon {
+  width: 70px;
+  height: 70px;
+  background: #5e6954;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.full-story-view h2 {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+.story-body-text {
+  text-align: left;
+  line-height: 1.7;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Responsive Viewports */
+@media (min-width: 1024px) {
+  .st-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .reading-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    border-radius: 0;
+  }
+  .reading-panel.open {
+    display: block;
+  }
+}

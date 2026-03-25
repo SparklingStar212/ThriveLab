@@ -1,0 +1,88 @@
+.terms-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.t-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.t-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+.t-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.t-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.t-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.t-content {
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+.t-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+.t-intro {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.t-section {
+  margin-bottom: 25px;
+}
+
+.t-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.t-section p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .t-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .t-content {
+    padding-top: 60px;
+  }
+}

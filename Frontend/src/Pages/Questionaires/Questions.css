@@ -1,0 +1,214 @@
+.questions-page {
+background-color: #f7f9f5;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+padding: 20px;
+font-family: sans-serif;
+}
+
+.q-header {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-bottom: 40px;
+}
+
+.q-dot {
+width: 35px;
+height: 8px;
+background: #d1d1d1;
+border-radius: 10px;
+margin: 0 4px;
+}
+
+.q-dot.active { background: #a7c49f; }
+
+.q-skip {
+position: absolute;
+right: 0;
+background: none;
+border: none;
+color: #666;
+}
+
+.q-body { text-align: center; flex: 1; }
+.q-title { font-size: 1.6rem; margin-bottom: 5px; }
+.q-sub { font-size: 0.9rem; color: #888; margin-bottom: 30px; }
+
+/* Staggered layout like the image */
+.q-options-list {
+display: flex;
+flex-direction: column;
+gap: 15px;
+max-width: 400px;
+margin: 0 auto;
+}
+
+.q-chip {
+padding: 15px 25px;
+border: 1px solid #a7c49f;
+background: white;
+border-radius: 12px;
+cursor: pointer;
+width: fit-content;
+transition: 0.2s;
+}
+
+.chip-0 { align-self: flex-start; margin-left: 5%; }
+.chip-1 { align-self: flex-end; margin-right: 5%; }
+.chip-2 { align-self: flex-start; }
+.chip-3 { align-self: flex-end; }
+.chip-4 { align-self: flex-start; margin-left: 10%; }
+
+.q-chip.is-active {
+background: #eef3eb;
+border-width: 2px;
+}
+
+.q-footer { text-align: right; padding-top: 20px; }
+.q-next-btn {
+background: #c4d4b5;
+border: none;
+padding: 12px 40px;
+border-radius: 15px;
+font-weight: bold;
+}
+
+/* Layout for Questions Two grid */
+.q-options-container {
+display: flex;
+flex-direction: column;
+gap: 25px;
+max-width: 500px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+.q-row {
+display: flex;
+gap: 15px;
+width: 100%;
+}
+
+.flex-start { justify-content: flex-start; }
+.flex-end { justify-content: flex-end; padding-right: 10%; }
+
+/* Previous Button Styling */
+.btn-back {
+background: white;
+border: 1px solid #E5987E; /* Brand peach color */
+padding: 12px 30px;
+border-radius: 15px;
+font-weight: 500;
+cursor: pointer;
+}
+
+.q-footer.split {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: auto;
+padding-bottom: 20px;
+}
+
+/* Chip sizing for the 'Two per row' layout */
+.q-row .q-chip {
+flex: 0 1 auto;
+min-width: 140px;
+}
+
+/* Container for the staggered buttons */
+.q-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Row alignment logic */
+.q-row {
+  display: flex;
+  width: 100%;
+}
+
+.flex-start { justify-content: flex-start; padding-left: 5%; }
+.flex-end { justify-content: flex-end; padding-right: 5%; }
+
+/* Progress Dots - Third dot is active */
+.q-dot.active {
+  background-color: #a7c49f;
+  width: 35px; /* Pill shape */
+}
+
+/* Previous/Back Button with Peach Border */
+.btn-back {
+  background: white;
+  border: 1px solid #e5987e;
+  color: #333;
+  padding: 12px 30px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #fff9f7;
+}
+
+/* Footer layout for dual buttons */
+.q-footer.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Center alignment for the final footer */
+.q-footer.center {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* The Final "Let's Get Started" Button */
+.start-btn {
+  background-color: #c4d4b5; /* Muted brand green */
+  border: none;
+  padding: 16px 50px;
+  border-radius: 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2D3E2D;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.start-btn:hover:not(:disabled) {
+  background-color: #b5c7a4;
+  transform: translateY(-2px);
+}
+
+.start-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Custom row offsets to match the zig-zag in mockup 4 */
+.q-row {
+  margin-bottom: 5px; /* Tighter spacing for more chips */
+}
+
+/* Mobile specific font sizing for longer titles */
+@media (max-width: 480px) {
+  .q-title {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+}

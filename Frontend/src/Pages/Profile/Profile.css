@@ -1,0 +1,276 @@
+.profile-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.p-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.p-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+.p-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.p-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.p-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.p-scroll-content {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Profile Picture & Name */
+.p-top-card {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+.p-pic-wrapper {
+  position: relative;
+  width: 140px;
+  margin: 0 auto 15px;
+}
+.p-large-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: white;
+}
+.p-camera-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.p-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.p-edit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #c4d4b5;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Menu List Styling */
+.p-section {
+  margin-bottom: 25px;
+  text-align: left;
+}
+.p-section-title {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.p-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f0f4ee;
+  padding: 12px 20px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.p-menu-item:hover {
+  background: #e6ede3;
+}
+.p-menu-icon {
+  font-size: 1.1rem;
+}
+.p-menu-label {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Details View Styling */
+.p-details-card {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.p-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid transparent;
+}
+.p-label {
+  color: #555;
+  font-size: 0.95rem;
+}
+.p-value {
+  font-weight: 500;
+  color: #000;
+}
+
+.p-actions-footer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 100px;
+}
+.p-delete-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.p-logout-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1024px) {
+  .p-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .p-scroll-content {
+    padding: 40px;
+  }
+}
+
+
+
+/* Form Layout */
+.edit-form {
+max-width: 500px;
+margin: 0 auto;
+padding-top: 20px;
+}
+
+.f-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+gap: 20px;
+}
+
+.f-row label {
+color: #555;
+font-size: 0.95rem;
+flex: 0 0 120px;
+text-align: left;
+}
+
+.f-row input[type="text"],
+.f-row input[type="email"],
+.f-row select {
+flex: 1;
+padding: 10px 15px;
+border: 1px solid #d1d1d1;
+border-radius: 10px;
+background: white;
+outline: none;
+font-size: 0.95rem;
+color: #666;
+}
+
+/* Date of Birth Inputs */
+.dob-group {
+flex: 1;
+display: flex;
+gap: 10px;
+}
+
+.dob-input {
+width: 60px;
+text-align: center;
+padding: 10px !important;
+}
+
+.dob-input.long {
+width: 90px;
+}
+
+/* Custom Select Arrow */
+.select-wrapper {
+flex: 1;
+position: relative;
+}
+
+.select-wrapper select {
+width: 100%;
+appearance: none;
+background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+background-repeat: no-repeat;
+background-position: right 10px center;
+background-size: 1em;
+}
+
+/* Top Save Button */
+.save-btn-top {
+background-color: #c4d4b5;
+border: none;
+padding: 6px 20px;
+border-radius: 8px;
+font-weight: 500;
+cursor: pointer;
+position: absolute;
+right: 120px; /* Aligned relative to the avatar on desktop */
+}
+
+@media (max-width: 768px) {
+.save-btn-top {
+right: 20px;
+top: 20px;
+}
+.f-row {
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+}
+}

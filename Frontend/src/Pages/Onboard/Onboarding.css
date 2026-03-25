@@ -1,0 +1,363 @@
+.onboarding-page {
+  background-color: #f7f9f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.onboarding-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.skip-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Illustration Mask */
+.illustration-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-bg-mask {
+  width: 90vw;
+  max-width: 500px;
+  height: 45vh;
+  background-color: #eef3eb;
+  border-radius: 0 0 250px 250px; /* Creates the curved bottom */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-onboarding-img {
+  width: 100%;
+  height: auto;
+  transform: translateY(10px);
+}
+
+/* Content */
+.onboarding-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.onboarding-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.onboarding-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 320px;
+  margin: 0 auto 30px;
+}
+
+/* Progress Dots */
+.progress-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+}
+
+.dot.active {
+  width: 24px; /* Matches the elongated pill shape in your image */
+  border-radius: 10px;
+  background-color: #a7c49f;
+}
+
+/* Next Button */
+.nav-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns to right like the mockup */
+}
+
+.next-btn {
+  background-color: #c4d4b5; /* Slightly muted green */
+  border: none;
+  padding: 12px 35px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 768px) {
+  .onboarding-page {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle-bg-mask {
+    height: 400px;
+    width: 600px;
+    border-radius: 300px; /* Full circle on desktop looks cleaner */
+  }
+}
+
+.onboarding-page {
+  background-color: #f7f9f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.onboarding-header {
+  padding: 20px;
+  text-align: right;
+}
+
+.skip-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+/* The Green Glowing Circle */
+.green-orb-bg {
+  width: 100%;
+  height: 50vh;
+  background: radial-gradient(circle, #86B98E 0%, #A7C49F 100%);
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.phone-container {
+  width: 200px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+.mockup-img { width: 100%; }
+
+/* Text Styling */
+.onboarding-content { padding: 40px 20px; }
+.onboarding-title { font-size: 1.8rem; margin-bottom: 10px; }
+.onboarding-desc { color: #555; max-width: 300px; margin: 0 auto 30px; }
+
+/* Progress Dots */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.dot.active {
+  width: 24px;
+  border-radius: 10px;
+  background: #a7c49f;
+}
+
+/* Footer Buttons */
+.button-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.btn-prev {
+  background: white;
+  border: 1px solid #E5987E; /* Peach border */
+  padding: 12px 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn-next {
+  background: #c4d4b5;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Background Orb for Screen 3 - Peach-to-Green mix */
+.support-orb-bg {
+width: 100%;
+height: 52vh;
+background: radial-gradient(circle at center, #ffd8c4 0%, #eef3eb 70%, #f7f9f5 100%);
+border-radius: 0 0 50% 50%;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+overflow: hidden;
+}
+
+.onboarding-main-img {
+width: 100%;
+max-width: 420px;
+height: auto;
+transform: translateY(10px);
+}
+
+/* Dots: Pill shape for the active dot */
+.dots-container {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-bottom: 40px;
+}
+
+.dot {
+width: 8px;
+height: 8px;
+background: #d1d1d1;
+border-radius: 50%;
+}
+
+.dot.active {
+width: 24px;
+background-color: #a7c49f;
+border-radius: 10px;
+}
+
+/* Desktop Polish */
+@media (min-width: 768px) {
+.support-orb-bg {
+width: 650px;
+height: 480px;
+border-radius: 325px;
+margin: 0 auto;
+}
+}
+
+/* Unique Orb for Screen 4 - Very soft light green */
+.stats-orb-bg {
+width: 100%;
+height: 50vh;
+background: radial-gradient(circle at center, #f0f4ee 0%, #f7f9f5 100%);
+border-radius: 0 0 50% 50%;
+display: flex;
+justify-content: center;
+align-items: center; /* Centers the card instead of anchoring to bottom */
+overflow: hidden;
+}
+
+/* Styling the floating stats card */
+.stats-card {
+width: 260px;
+background: #fff;
+border-radius: 25px;
+padding: 10px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+/* Adding a subtle float animation like the original UI */
+animation: floating 3s ease-in-out infinite;
+}
+
+.chart-img {
+width: 100%;
+height: auto;
+border-radius: 15px;
+}
+
+/* Floating animation keyframes */
+@keyframes floating {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+
+/* Dot Logic for Screen 4 /
+/ The .dot.active class stays the same, just ensure it's on the 4th span */
+
+/* Desktop Polish */
+@media (min-width: 768px) {
+.stats-orb-bg {
+width: 650px;
+height: 480px;
+border-radius: 325px;
+margin: 0 auto;
+}
+.stats-card {
+width: 300px;
+}
+}
+
+/* Unique Orb for Screen 5 - Multi-tone sunset/warm glow */
+.choice-orb-bg {
+width: 100%;
+height: 52vh;
+/* Replicating that soft tan/sunset gradient in the mockup */
+background: radial-gradient(circle at center, #ead9c8 0%, #eef3eb 75%, #f7f9f5 100%);
+border-radius: 0 0 50% 50%;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+overflow: hidden;
+}
+
+/* Ensure the character and paths sit correctly */
+.choice-orb-bg .onboarding-main-img {
+width: 110%; /* Makes the paths "leak" out slightly for that wide look */
+max-width: 500px;
+transform: translateY(5px);
+}
+
+/* Specific button text for the final screen */
+.button-footer .btn-prev {
+border-color: #e5987e; /* Using the peach brand color for Sign In */
+color: #333;
+}
+
+.button-footer .btn-next {
+background-color: #a7c49f; /* Stronger green for the primary Sign Up action */
+color: #2D3E2D;
+}
+
+/* Dots: Final position */
+.dot.active {
+width: 24px;
+background-color: #a7c49f;
+}
+
+/* Desktop Polish */
+@media (min-width: 768px) {
+.choice-orb-bg {
+width: 700px;
+height: 500px;
+border-radius: 350px;
+margin: 0 auto;
+}
+}

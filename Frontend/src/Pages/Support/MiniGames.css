@@ -1,0 +1,125 @@
+.games-page {
+  display: flex;
+  background: #f7f9f5;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.g-sidebar {
+  width: 240px;
+  background: #f0f4ee;
+  padding: 40px 20px;
+  display: none;
+}
+.g-nav-item {
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #555;
+}
+.g-nav-item.active {
+  background: #a7c49f;
+  color: white;
+}
+
+.g-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.g-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.g-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.g-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: #fff5f0; /* Soft peach background /
+border: 1px solid #e5987e; / Terracotta border */
+  border-radius: 20px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-icon-box {
+  width: 55px;
+  height: 55px;
+  background: #e5987e; /* Icon background matching player button */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.gamepad-img {
+  width: 25px;
+  filter: brightness(0) invert(1);
+} /* Makes icon white */
+
+.game-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #333;
+  min-height: 40px; /* Ensures alignment even with 2-line titles */
+}
+
+.play-button {
+  background: #e5987e;
+  color: white;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1024px) {
+  .g-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .games-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}

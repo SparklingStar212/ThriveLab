@@ -1,0 +1,194 @@
+.zuma-page {
+  display: flex;
+  background-color: #f7f9f5;
+  min-height: 100vh;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* Sidebar Logic */
+.chat-sidebar {
+  position: absolute;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #f0f4ee;
+  transition: left 0.3s ease;
+  z-index: 100;
+  padding: 40px 20px;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.05);
+}
+.chat-sidebar.open {
+  left: 0;
+}
+.close-sidebar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #b8c7ab;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.new-chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin: 40px 0;
+  cursor: pointer;
+}
+.history-label {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.history-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.history-list li {
+  padding: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.history-list li:hover {
+  color: #a7c49f;
+}
+
+/* Main Chat UI */
+.zuma-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.zuma-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.z-avatar {
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+}
+
+.zuma-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  background: #b8c7ab;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.zuma-intro {
+  text-align: center;
+  margin-top: 50px;
+}
+.greeting {
+  font-size: 1.1rem;
+  color: #333;
+}
+.prompt {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0 30px;
+}
+.zuma-character img {
+  width: 160px;
+  filter: drop-shadow(0 10px 15px rgba(167, 196, 159, 0.4));
+}
+
+/* Messages */
+.message-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.msg-wrapper {
+  display: flex;
+  gap: 10px;
+  max-width: 85%;
+}
+.msg-wrapper.zuma {
+  align-self: flex-start;
+}
+.msg-wrapper.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.mini-zuma {
+  width: 40px;
+  height: 40px;
+}
+.msg-bubble {
+  padding: 15px 20px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #eef3eb;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+.user .msg-bubble {
+  background: #f0f4ee;
+  border-color: #d8e2d4;
+}
+
+/* Input Bar */
+.zuma-footer {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}
+.input-pill {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border: 1px solid #333;
+  border-radius: 30px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+}
+.input-pill input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+.mic-btn {
+  background: #b8c7ab;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: white;
+  cursor: pointer;
+}
